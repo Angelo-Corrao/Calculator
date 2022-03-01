@@ -6,13 +6,257 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/cancelBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="C"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/invertBtn"
+        app:layout_constraintEnd_toStartOf="@+id/invertBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/invertBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/percentageBtn"
+        app:layout_constraintEnd_toStartOf="@+id/percentageBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancelBtn" />
+
+    <Button
+        android:id="@+id/percentageBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/divideBtn"
+        app:layout_constraintEnd_toStartOf="@+id/divideBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/invertBtn" />
+
+    <Button
+        android:id="@+id/divideBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/percentageBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <Button
+        android:id="@+id/number7Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number8Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number8Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/number8Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number9Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number9Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number7Btn" />
+
+    <Button
+        android:id="@+id/number9Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/multiplicationBtn"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number8Btn" />
+
+    <Button
+        android:id="@+id/multiplicationBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number9Btn"
+        app:layout_constraintTop_toBottomOf="@+id/divideBtn" />
+
+    <Button
+        android:id="@+id/number4Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number5Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number5Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/number5Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number6Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number6Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number4Btn" />
+
+    <Button
+        android:id="@+id/number6Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/subtractionBtn"
+        app:layout_constraintEnd_toStartOf="@+id/subtractionBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number5Btn" />
+
+    <Button
+        android:id="@+id/subtractionBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number6Btn"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationBtn" />
+
+    <Button
+        android:id="@+id/number1Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number2Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number2Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/number2Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number3Btn"
+        app:layout_constraintEnd_toStartOf="@+id/number3Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number1Btn" />
+
+    <Button
+        android:id="@+id/number3Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/additionBtn"
+        app:layout_constraintEnd_toStartOf="@+id/additionBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number2Btn" />
+
+    <Button
+        android:id="@+id/additionBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number3Btn"
+        app:layout_constraintTop_toBottomOf="@+id/subtractionBtn" />
+
+    <Button
+        android:id="@+id/number0Btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/decimalBtn"
+        app:layout_constraintEnd_toStartOf="@+id/decimalBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/decimalBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="."
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/equalBtn"
+        app:layout_constraintEnd_toStartOf="@+id/equalBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number0Btn" />
+
+    <Button
+        android:id="@+id/equalBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/decimalBtn"
+        app:layout_constraintTop_toBottomOf="@+id/additionBtn" />
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="360dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/divideBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
 </androidx.constraintlayout.widget.ConstraintLayout>
