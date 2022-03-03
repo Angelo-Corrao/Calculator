@@ -1,261 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/cancelBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="C"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/invertBtn"
-        app:layout_constraintEnd_toStartOf="@+id/invertBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/invertBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="+/-"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/percentageBtn"
-        app:layout_constraintEnd_toStartOf="@+id/percentageBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cancelBtn" />
-
-    <Button
-        android:id="@+id/percentageBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="%"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/divideBtn"
-        app:layout_constraintEnd_toStartOf="@+id/divideBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/invertBtn" />
-
-    <Button
-        android:id="@+id/divideBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="/"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percentageBtn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
-
-    <Button
-        android:id="@+id/number7Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="7"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number8Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number8Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/number8Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="8"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number9Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number9Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number7Btn" />
-
-    <Button
-        android:id="@+id/number9Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="9"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/multiplicationBtn"
-        app:layout_constraintEnd_toStartOf="@+id/multiplicationBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number8Btn" />
-
-    <Button
-        android:id="@+id/multiplicationBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="X"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number9Btn"
-        app:layout_constraintTop_toBottomOf="@+id/divideBtn" />
-
-    <Button
-        android:id="@+id/number4Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="4"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number5Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number5Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/number5Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="5"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number6Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number6Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number4Btn" />
-
-    <Button
-        android:id="@+id/number6Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="6"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/subtractionBtn"
-        app:layout_constraintEnd_toStartOf="@+id/subtractionBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number5Btn" />
-
-    <Button
-        android:id="@+id/subtractionBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number6Btn"
-        app:layout_constraintTop_toBottomOf="@+id/multiplicationBtn" />
-
-    <Button
-        android:id="@+id/number1Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number2Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number2Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/number2Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/number3Btn"
-        app:layout_constraintEnd_toStartOf="@+id/number3Btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number1Btn" />
-
-    <Button
-        android:id="@+id/number3Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:textColor="@color/black"
-        app:layout_constraintBaseline_toBaselineOf="@+id/additionBtn"
-        app:layout_constraintEnd_toStartOf="@+id/additionBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number2Btn" />
-
-    <Button
-        android:id="@+id/additionBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number3Btn"
-        app:layout_constraintTop_toBottomOf="@+id/subtractionBtn" />
-
-    <Button
-        android:id="@+id/number0Btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/black"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintBaseline_toBaselineOf="@+id/decimalBtn"
-        app:layout_constraintEnd_toStartOf="@+id/decimalBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/decimalBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="."
-        android:textColor="@color/black"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/equalBtn"
-        app:layout_constraintEnd_toStartOf="@+id/equalBtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/number0Btn" />
-
-    <Button
-        android:id="@+id/equalBtn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="="
-        android:textColor="@color/black"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/decimalBtn"
-        app:layout_constraintTop_toBottomOf="@+id/additionBtn" />
-
     <TextView
-        android:id="@+id/resultTv"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginTop="360dp"
-        android:gravity="center"
+        android:id="@+id/numberText"
         android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/divideBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="40sp"
+        android:gravity="center_vertical|end"
+        android:padding="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="C" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/invertButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="+/-" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/percentageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="%" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/divide"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/multiply"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="X" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/subtract"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/number3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:layout_weight="2"
+                android:id="@+id/number0"
+                android:textSize="25sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/pointButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/CalculatorButton"
+                android:id="@+id/resultButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="=" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
